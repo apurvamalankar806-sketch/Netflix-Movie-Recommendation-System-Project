@@ -34,10 +34,11 @@ The system recommends top similar movies based on cosine similarity percentage.
 Example:<br>
 Input Movie: Narcos<br>
 Recommended Movies:<br>
-El Chapo → 82.4 %<br>
-Drug Lords → 80.1 %<br>
-Ozark → 76.3 %<br>
-Breaking Bad → 74.9 %<br>
+Downton Abbey  →  16.02 %<br>
+London Spy  →  11.1 %<br>
+Flowers  →  10.88 %<br>
+Lovesick  →  10.79 %<br>
+The Frankenstein Chronicles  →  10.39 %<br>
 Higher similarity percentage indicates stronger content similarity.
 
 ## Conclusion
