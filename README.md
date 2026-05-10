@@ -41,6 +41,15 @@ Lovesick  →  10.79 %<br>
 The Frankenstein Chronicles  →  10.39 %<br>
 Higher similarity percentage indicates stronger content similarity.
 
+## Skills Gained
+- Content-Based Recommendation Systems
+- TF-IDF Vectorization
+- Cosine Similarity
+- Text Feature Engineering
+- Data Cleaning and Preprocessing
+- Handling Duplicate Records
+- Exploratory Problem Solving
+
 ## Conclusion
 The project demonstrates the practical implementation of a content-based recommendation system using textual feature engineering and similarity metrics.
 By progressively improving the system and resolving duplicate data issues, the final model provides more accurate and reliable movie recommendations.
