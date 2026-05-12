@@ -48,7 +48,7 @@ Higher similarity percentage indicates stronger content similarity.
 - Text Feature Engineering
 - Data Cleaning and Preprocessing
 - Handling Duplicate Records
-- Exploratory Problem Solving
+- Exploratory problem solving
 
 ## Conclusion
 The project demonstrates the practical implementation of a content-based recommendation system using textual feature engineering and similarity metrics.
