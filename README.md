@@ -1,7 +1,7 @@
 # Netflix-Movie-Recommendation-System-Project
 
 ## Description
-This project focuses on building a Netflix movie recommendation system that suggests similar movies based on textual content such as genre, cast, director, and description. The project was developed in multiple stages starting from a basic recommendation approach and later enhanced using similarity-based techniques.
+this project focuses on building a Netflix movie recommendation system that suggests similar movies based on textual content such as genre, cast, director, and description. The project was developed in multiple stages starting from a basic recommendation approach and later enhanced using similarity-based techniques.
 
 ## Objective
 To understand how recommendation systems work.<br>
