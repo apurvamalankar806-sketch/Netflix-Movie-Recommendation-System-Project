@@ -25,10 +25,10 @@ The recommendation system was further improved by applying TF-IDF Vectorization 
 Cosine similarity was then used to measure similarity between movies, allowing the system to recommend the most relevant titles along with similarity scores.
 
 ## Tools & Technologies Used
-Python<br>
-Pandas<br>
-Scikit-learn<br>
-Jupyter Notebook<br>
+- Python<br>
+- Pandas<br>
+- Scikit-learn<br>
+- Jupyter Notebook<br>
 
 ## Output
 The system recommends top similar movies based on cosine similarity percentage.
