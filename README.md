@@ -52,5 +52,5 @@ Higher similarity percentage indicates stronger content similarity.
 - Exploratory problem solving
 
 ## Conclusion
-The project demonstrates the practical implementation of a content-based recommendation system using textual feature engineering and similarity metrics.
+The project demonstrates the practical implementation of a content-based recommendation system using textual feature engineering and similarity metrics. <br>
 By progressively improving the system and resolving duplicate data issues, the final model provides more accurate and reliable movie recommendations.
