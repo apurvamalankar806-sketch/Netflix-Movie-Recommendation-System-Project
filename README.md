@@ -1,56 +1,50 @@
-# Netflix-Movie-Recommendation-System-Project
+# Netflix Movie Recommendation System
 
-## Description
-This project focuses on building a Netflix movie recommendation system that suggests similar movies based on textual content such as genre, cast, director, and description.<br>
-The project was developed in multiple stages starting from a basic recommendation approach and later enhanced using similarity-based techniques.
+A content-based recommender that suggests similar Netflix titles from a selected title.
 
-## Objective
-- To understand how recommendation systems work.<br>
-- To build a content-based movie recommender.<br>
-- To improve recommendation accuracy through similarity computation.<br>
-- To handle real-world dataset issues such as duplicate titles.<br>
+**Live demo:** https://netflix-recommender-apurva.streamlit.app/
 
-## Project Workflow
-**Stage 1**: Basic Recommendation System<br>
-Initially, a simple recommendation logic was implemented by selecting important columns like title, cast, genre, director, and description.
-These features were combined to create a textual representation of each movie which was used to recommend similar content.
+## Overview
+The system compares titles using their director, cast, genres and description. A user selects a title and receives the 10 most similar titles with similarity scores.
 
-**Stage 2**: Handling Duplicate Titles<br>
-During development, it was observed that the dataset contained multiple entries with identical movie titles.
-To resolve this issue, the dataframe index was reset and a case-insensitive title-to-index mapping was created.
-Duplicate title conflicts were removed using drop_duplicates() to ensure consistent recommendation retrieval.
+## Approach
+1. Combine director, cast, genres and description into a single text field.
+2. Convert the text to numerical vectors with TF-IDF.
+3. Rank all other titles by cosine similarity to the selected title.
 
-**Stage 3**: Enhanced Recommendation using Cosine Similarity<br>
-The recommendation system was further improved by applying TF-IDF Vectorization to convert textual data into numerical vectors.
-Cosine similarity was then used to measure similarity between movies, allowing the system to recommend the most relevant titles along with similarity scores.
+## Data Quality
+The dataset contains multiple entries with identical titles, which caused inconsistent lookups. A case-insensitive title-to-index mapping with duplicate keys removed now resolves each title to a single record.
 
-## Tools & Technologies Used
-- Python<br>
-- Pandas<br>
-- Scikit-learn<br>
-- Jupyter Notebook<br>
+## Sample Output
+Input: *The Crown*
 
-## Output
-The system recommends top similar movies based on cosine similarity percentage.
-Example:<br>
-Input Movie: Narcos<br>
-Recommended Movies:<br>
-Downton Abbey  →  16.02 %<br>
-London Spy  →  11.1 %<br>
-Flowers  →  10.88 %<br>
-Lovesick  →  10.79 %<br>
-The Frankenstein Chronicles  →  10.39 %<br>
-Higher similarity percentage indicates stronger content similarity.
+| Recommended title | Similarity |
+|---|---|
+| Downton Abbey | 16.02% |
+| London Spy | 11.10% |
+| Flowers | 10.88% |
+| Lovesick | 10.79% |
+| The Frankenstein Chronicles | 10.39% |
 
-## Skills Gained
-- Content-Based Recommendation Systems
-- TF-IDF Vectorization
-- Cosine Similarity
-- Text Feature Engineering
-- Data Cleaning and Preprocessing
-- Handling Duplicate Records
-- Exploratory problem solving
+## Limitations
+- Recommendations rely on content metadata only. There is no user viewing data, so results are not personalised.
+- Similarity scores are low overall, and titles with sparse descriptions produce weaker matches.
+- The model has not yet been evaluated with a quantitative metric.
 
-## Conclusion
-The project demonstrates the practical implementation of a content-based recommendation system using textual feature engineering and similarity metrics. <br>
-By progressively improving the system and resolving duplicate data issues, the final model provides more accurate and reliable movie recommendations.
+## Planned Improvements
+- Add an evaluation method, such as genre overlap between the input and its recommendations.
+- Apply dimensionality reduction and clustering to group similar titles.
+
+## Tech Stack
+Python, Pandas, Scikit-learn, Streamlit
+
+## Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Repository Contents
+- `app.py`: Streamlit application
+- `Netflix_Movie_Recommendation_System.ipynb`: development and testing notebook
+- `netflix_titles.csv`: dataset
